@@ -1,0 +1,79 @@
+/*      intrebare tabel layout ?????????? */
+
+:root {
+    --c1: #C3AD81;
+    --c2: #6F4E37;
+    --border-width: 2px;
+}
+
+
+.produse-papetarie {
+    margin-top: 2em;
+    width: 100%;
+    border-collapse: collapse;
+    border: 5px black inset;  /* borderul tabelului*/
+}
+
+.produse-papetarie th, .produse-papetarie td {
+    border: 1px solid black; /* borderul de 1px dinntre celule */
+}
+
+.produse-papetarie th {
+    background-color: #f2f2f2;
+    padding: 8px;
+    text-align: left;
+}
+
+.produse-papetarie td {
+    padding: 8px;
+}
+
+.produse-papetarie tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Culori borduri între rânduri */
+.produse-papetarie tr:nth-child(even) td {
+    border-bottom: var(--border-width) solid var(--c1); 
+}
+
+.produse-papetarie tr:nth-child(odd) td {
+    border-bottom: var(--border-width) solid var(--c2); 
+}
+
+.produse-papetarie thead {
+    border-bottom: var(--border-width) solid black;
+}
+
+.produse-papetarie tfoot {
+    border-top: var(--border-width) solid black;
+}
+
+.produse-papetarie caption {
+    caption-side: bottom;
+    font-style: italic;
+    padding-top: 10px;
+} 
+
+
+.produse-papetarie tr {
+    transition: outline 0.5s linear; 
+}
+
+.produse-papetarie tr:hover {
+    outline: 5px solid rgba(0, 0, 0, 0.7); 
+    transition: outline 0.5s ease; 
+    outline-offset: -5px; 
+}
+
+.container-scroll {
+    overflow-x: auto; 
+    max-width: 100%;
+}
+
+.produse-papetarie {
+    margin-top: 2em;
+    width: max-content; /* ne asiguram ca latimea tabelului este egala cu suma latimilor celulelor */
+    border-collapse: collapse;
+    border: 5px inset black; 
+}

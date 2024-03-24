@@ -1,0 +1,152 @@
+body{
+  --culoare1: #800020;
+  --culoare2: #6F4E37;
+  --culoare3: #FBFBEF;
+  --culoare4: #4a362c;
+  --culoare5: #EBE6D6;
+  
+
+  --spatiere:100px;
+  padding-left: var(--spatiere);
+  padding-right: var(--spatiere);
+
+  background-color: var(--culoare3);
+}
+
+#link-top {
+  position: fixed;
+  bottom: 0.25em;
+  opacity: 0.25;
+  right: 0.25em;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  border: 5px solid grey;
+  border-style: dashed;
+  border-color: var(--culoare2);
+  border-radius: 50%;
+  background: var(--culoare3);
+  box-shadow: 0px 0px 5px 5px var(--culoare4) inset;
+  text-decoration: none;
+  transition: all 500ms linear;
+}
+
+#link-top:hover {
+  opacity: 1;
+  transform: rotate(90deg);
+}
+
+#sageata {
+  text-align: center;
+  display: block;
+  font-size: 2rem;
+  transition: all 500ms linear;
+}
+
+#link-top:hover #sageata {
+  color: var(--culoare1);
+  transform: rotate(-90deg);  /* aici practic am anulat comanda de mai sus (pentru a tine sageata pe loc) */
+}
+
+#calendar{
+  border-spacing: 0px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+#calendar th, #calendar td {
+  border:3px solid black;
+}
+
+#calendar th:nth-child(2n+1){
+  background-color: var(--culoare5);
+}
+
+
+#orar{
+  border-spacing: 0px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+#orar th, #orar td {
+  border:1.5px solid black;
+}
+
+#orar th:nth-child(2n+1){
+  background-color: var(--culoare5);
+}
+
+.container-iframe{
+  display: flex;
+  flex-direction: column-reverse;
+  width: 50%;
+}
+
+.container-iframe iframe{
+  width:100%;
+}
+
+.taburi-iframe{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  
+}
+
+.taburi-iframe>a{
+  text-align: center;
+  display: block;
+  background-color: var(--culoare5);
+  padding: 0.7em;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 5px 25px 0px var(--culoare4) inset;
+  border: 3px solid white; 
+  outline: 3px solid black; 
+  transition: 500ms linear;
+  text-decoration: none;
+  color:var(--culoare4);
+  text-shadow:  -1px -1px 0 white,  
+                1px -1px 0 white,
+                -1px 1px 0 white,
+                1px 1px 0 white;
+
+}
+
+.taburi-iframe>a:last-child{
+  margin-bottom: 0;
+}
+
+.taburi-iframe > a:hover {
+  box-shadow: 0px 0px 3px 3px var(--culoare4) inset;
+  transition: 500ms linear;
+}
+
+.taburi-iframe > a:nth-child(1) {
+  margin-right: auto; 
+}
+
+.taburi-iframe > a:nth-child(2) {
+  margin: auto; 
+}
+
+.taburi-iframe > a:nth-child(3) {
+  margin-left: auto;
+}
+
+
+.fa-solid.fa-location-dot {
+  font-size: normal;
+  animation: bounceIcon 0.5s infinite;
+}
+
+@keyframes bounceIcon {
+  0%, 100% {
+    transform: translateY(0); /* pozitia initiala si finala */
+  }
+  50% {
+    transform: translateY(-10px); /* bounce */
+  }
+}
